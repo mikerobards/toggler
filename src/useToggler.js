@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function useToggler(defaultOnValue) {
+function useToggler(defaultOnValue = false) {
     //create the state
     const [on, setIsToggledOn] = useState(defaultOnValue)
 
