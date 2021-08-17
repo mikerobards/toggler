@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function useToggler() {
+function useToggler(defaultOnValue) {
     //create the state
-    const [isToggledOn, setIsToggledOn] = useState(false)
+    const [on, setIsToggledOn] = useState(defaultOnValue)
 
     //create a method for easily flipping the isToggleOn value
 
@@ -12,7 +12,7 @@ function useToggler() {
 
     // Return something useful for whatever component will be using this hook
 
-    return { isToggledOn, toggle }
+    return { on, toggle }
 }
 
 export default useToggler
